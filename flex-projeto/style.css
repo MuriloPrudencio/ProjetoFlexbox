@@ -1,0 +1,256 @@
+/*Aqui se encontra as configurações gerais*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Times New Roman', Times, serif;
+}
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+ul li a {
+    text-decoration: none;
+}
+div img { /*responsividade das imagens*/
+    display: block;
+    width: 100%;
+}
+/*------------------------------*/
+        
+.container {
+    display: flex; /*Aqui transformamos todos os elementos do container em Flex*/
+    max-width: 992px; /*Atribuimos uma largura máxima de 992px*/
+    width: 100%; /*Adicionamos a largura real para o nosso elemento*/
+    margin: auto; /*Aqui definimos uma margem padrão para todo o conatainer, com o valor Auto*/
+    min-width: 320px;
+}
+header {
+    background-color: rgb(42, 42, 146);
+    height: 100px;  
+    display: flex; /*Aqui transformamos todos os elementos desse container em Flex*/
+    align-items: center; /*alinha todos os elementos ao centro*/ 
+    color: #ffffff;
+}
+header .list-url {
+    display: flex; /*Aqui transformamos todos os elementos desse container em Flex*/
+    width: 100%; /*Determinamos que a largura da LIST-URL será sempre 100% da tela, de qualquer dispositivo*/
+    max-width: 260px; /*Determinamos a largura maxima do nosso LIST-URL*/
+    justify-content: space-between; /*Aqui criamos um espaço igual entre os itens, de acordo com o max-width*/
+    align-items: center; /*alinhamos as url com a altura da logo deixando ao centro*/
+
+}
+.list-url li a {
+    color: #ffffff;
+    font-size: max(15px, 1.3vw);
+}
+header .menu {
+    justify-content: space-between; /*Aqui criamos um espaço igual entre os itens, de acordo com o max-width*/
+}
+.apresentacao {
+    height: 100vh; /*Aqui o viewport para que a altura sempre se modele a altura de qualquer tela independente dos px*/
+    align-items: center; /*alinhamos todos os itens ao centro de seu container*/
+    justify-content: space-between; /*atribuimos um espacamento igual para cada elementos*/
+}
+.apresentacao .text-apresentacao {
+    min-height: 200px; /*Atribuimos uma altura 
+    minima*/
+}
+.text-apresentacao h1 {
+    color: rgb(42, 42, 146);
+    font-size: 48px; /*mudamos o tamanho da fonte*/
+    margin-bottom: 10px; /*e atribuimos um distanciamento do elemento inferior*/
+}
+.btn {
+    background-color: rgb(42, 42, 146);
+    color: #ffffff;
+    border-radius: 50px;
+    width: 220px;
+    display: block; 
+    text-align: center; 
+    text-decoration: none;
+    height: 30px;
+    line-height: 29px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#quem-somos {
+    flex-direction: row-reverse;
+    align-items: center; /*alinhamos todos os itens ao centro de seu container*/
+    justify-content: space-between; /*atribuimos um espacamento igual para cada elementos*/
+    margin-bottom: 20px;
+}
+#quem-somos img {
+    min-width: 400px;
+}
+#quem-somos h2 {
+    font-size: 32px;
+    color: rgb(42, 42, 146);
+    display: flex;
+    margin-bottom: 20px;
+    font-size: max(23px, 1.4vw);
+}
+#quem-somos p {
+    margin-bottom: 10px;
+    width: 90%;
+    font-size: max(14px, 1.2vw);
+}
+.container-externo {
+    background-color: rgb(42, 42, 146);
+}
+#servicos {
+    flex-direction: column;
+    padding: 100px 0;
+}
+#servicos h2 {
+    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.list-servicos {
+    display: flex;
+    justify-content: space-between;
+}
+.list-servicos .item-servico {
+    text-align: center;
+}
+.item-servico a{
+    width: 220px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    height: 50px;
+    text-align: center;
+    margin-top: 20px;
+    line-height: 50px;
+    padding: 5px 10px;
+    color: rgb(42, 42, 146);
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 700px;
+}
+.item-servico p {
+    font-weight: 600px;
+    font-size: max(16px, 1.2vw);
+    color: #ffffff;
+    margin-top: 20px;
+}
+.item-servico img {
+    width: 80%;
+    margin: auto;
+}
+#planos {
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 70px;
+}
+#planos h2 {
+    font-size: 32px;
+    color: rgb(42, 42, 146);
+}
+.list-planos {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.item-plano {
+    flex: 1;
+    border: 2px solid rgb(42, 42, 146);
+    margin-right: 20px;
+    padding: 10px;
+    max-width: 200px;
+}
+.item-plano .btn {
+    margin: auto;
+    margin-bottom: 10px;
+    width: 160px;
+}
+.item-plano h3 {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(133, 128, 128);
+}
+.item-plano h3::after {
+    content: '';
+    background-color: rgb(42, 42, 146);
+    width: 100%;
+    height: 3px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+}
+.item-plano ul {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(133, 128, 128);
+    margin-bottom: 10px;
+}
+.item-plano ul li {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.item-plano ul li::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: rgb(42, 42, 146);
+    margin-right: 5px;
+
+}
+footer {
+    background-color: rgb(42, 42, 146);
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+footer .footer {
+    justify-content: space-between;
+    color: #ffffff;
+}
+/*mobile*/
+@media(max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .apresentacao .text-apresentacao {
+        width: 95%;
+    }
+    .apresentacao {
+        flex-direction: column-reverse;
+        margin-top: 30px;
+    }
+    #quem-somos img {
+        min-width: 300px;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    #quem-somos h2, p {
+        margin-left: 15px;
+    }
+    #quem-somos {
+        flex-direction: column-reverse;
+
+    }
+    .list-servicos {
+        flex-direction: column;
+    }
+    .list-servicos img {
+        width: 50%;
+        margin: auto;
+    }
+    .list-planos {
+        flex-direction: column;
+        align-items: flex-start;
+    
+    }
+    .list-planos .item-plano {
+        margin: 10px;
+        width: 100%;
+    }
+    
+}
